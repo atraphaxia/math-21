@@ -1,0 +1,98 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <atraphaxia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+
+
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage[a4paper, margin = 2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{mathtools}
+\usepackage{polynom}
+\usepackage{pst-eucl}
+\usepackage{siunitx}
+\usepackage{tabularray}
+\usepackage{tkz-tab}
+\usepackage{xpatch}
+
+
+
+\DefTblrTemplate{caption}{default}{}
+\DefTblrTemplate{capcont}{default}{}
+
+\xpatchcmd{\tkzTabLine}{$0$}{$\bullet$}{}{}
+\tikzset{t style/.style={style=solid}}
+
+
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+
+
+
+\NewDocumentCommand{\phxboilerplate}{mm}{%
+	\title{
+		#1\\
+		#2
+	}
+	\author{
+		Nile Jocson \\
+		\textless{}atraphaxia@gmail.com\textgreater{}
+	}
+}
+
+\NewDocumentCommand{\phxeucl}{mmmmm}{%
+	\begin{center}
+		\begin{pspicture}(#1, #2)(#3, #4)
+			\psaxes[labels = none]{<->}(0, 0)(#1, #2)(#3, #4)[$x$, -90][$y$, 0]
+			#5
+		\end{pspicture}
+	\end{center}
+}
+
+\NewDocumentCommand{\phxphoto}{m}{%
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{#1}
+	\end{center}
+}
+
+\NewDocumentCommand{\phxproof}{m}{
+	\begin{longtblr}[expand = \phxeqb\phxeqs\phxeqf\phxsign\phxsdiv]{colspec = {|llX[r]|}, rowsep = 4pt}
+		#1
+		& & $\blacksquare$ \\
+		\hline{}
+	\end{longtblr}
+	\pagebreak{}
+}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\newcommand{\phxeqb}[3]{\hline{}#1&#2&#3\\}
+\newcommand{\phxeqs}[3]{#1&#2&#3\\}
+\newcommand{\phxeqf}[3]{\hline{}#1&#2&Final answer. #3\\}
+
+\newcommand{\phxsign}[3]
+{
+	#1&
+	\adjustbox{valign = t}{
+		\begin{tikzpicture}
+			#2
+		\end{tikzpicture}
+	}&
+	Create a table of signs. #3\\
+}
+
+\newcommand{\phxsdiv}[4]{
+	#1&
+	\adjustbox{valign = t}{
+		\polyhornerscheme[x = #2]{#3}
+	}&
+	Try $x$ = #2. #4\\
+}
