@@ -1,0 +1,25 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <atraphaxia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\subsection{} Do as indicated.
+
+\subsubsection{} Find $\lim_{x \to 10} f(x)$ where $f(x) = x^2$ for all $x \neq 10$ but
+	$f(10) = 99$.
+	\phxproof{
+		\phxeqb{}{$lim_{x \to 10} f(x) = 100$}{As $x$ gets closer to 10, $f(x)$ goes to 100.}
+	}
+
+\subsubsection{} Determine the values of the constants $a$ and $b$ such that
+	$lim_{x \to 0} \frac{x}{\sqrt{ax + b} - 2} = 1$
+	\phxproof{
+		\phxeqb{}{$\sqrt{ax + b} - 2 = 0$}{Find a value for $b$ such that the limit is in indeterminate form of type $\frac{0}{0}$.}
+		\phxeqs{}{$\sqrt{b} - 2 = 0$}{$ax = 0$ since $x \to 0$.}
+		\phxeqs{}{$b = 4$}{}
+		\phxeqb{}{$lim_{x \to 0} \frac{x}{\sqrt{ax + 4} - 2} = 1$}{}
+		\phxeqs{}{$lim_{x \to 0} \frac{x}{\sqrt{ax + 4} - 2} \cdot \frac{\sqrt{ax + 4} + 2}{\sqrt{ax + 4} + 2} = 1$}{Rationalize.}
+		\phxeqs{}{$lim_{x \to 0} \frac{\cancel{x}(\sqrt{ax + 4} + 2)}{a\cancel{x} + \cancel{4} - \cancel{4}} = 1$}{}
+		\phxeqs{}{$\frac{\sqrt{a(0) + 4} + 2}{a} = 1$}{}
+		\phxeqs{}{$\frac{4}{a} = 1$}{}
+		\phxeqs{}{$a = 4$}{}
+		\phxeqf{}{$a = 4, b = 4$}{}
+	}

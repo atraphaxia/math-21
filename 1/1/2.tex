@@ -1,0 +1,115 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <atraphaxia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\subsection{} Evaluate the following limits.
+
+\subsubsection{} \[\lim_{x \to -1} x(x - 2)(x + 2)\]
+	\phxproof{
+		\phxeqb{}{$= -1(-1 - 2)(-1 + 2)$}{$\lim_{x \to a} f(x) = f(a)$ if $a$ is in the domain of $f$.}
+		\phxeqs{}{$= -1(-3)(1)$}{}
+		\phxeqf{}{$= 3$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to -1} \frac{3x^2 + 2x - 1}{x^3 + 1}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{3x^2 + 3x - x - 1}{x^3 + 1}$}{Factor by grouping.}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{(3x - 1)(x + 1)}{x^3 + 1}$}{}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{(3x - 1)\cancel{(x + 1)}}{\cancel{(x + 1)}(x^2 - x + 1)}$}{Factor using sum of two cubes.}
+		\phxeqs{}{$= \frac{(3(-1) - 1)}{{(-1)}^2 - (-1) + 1}$}{}
+		\phxeqf{}{$= -\frac{4}{3}$}{}
+	}
+
+\subsubsection{} \[\lim_{t \to 18} \frac{\sqrt{t - 2} - 4}{t - 18}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{t \to 18} \frac{\sqrt{t - 2} - 4}{t - 18} \cdot \frac{\sqrt{t - 2} + 4}{\sqrt{t - 2} + 4}$}{Rationalize.}
+		\phxeqs{}{$= \lim_{t \to 18} \frac{t - 2 - 16}{(t - 18)(\sqrt{t - 2} + 4)}$}{}
+		\phxeqs{}{$= \lim_{t \to 18} \frac{\cancel{t - 18}}{\cancel{(t - 18)}(\sqrt{t - 2} + 4)}$}{}
+		\phxeqs{}{$= \lim_{t \to 18} \frac{1}{\sqrt{t - 2} + 4}$}{}
+		\phxeqs{}{$= \frac{1}{\sqrt{18 - 2} + 4}$}{}
+		\phxeqf{}{$= \frac{1}{8}$}{}
+	}
+
+\subsubsection{} \[\lim_{s \to 3} \frac{2s^2 - 7s + 3}{s^2 - 4s + 3}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{s \to 3} \frac{2s^2 - 6s - s + 3}{(s - 3)(s - 1)}$}{Factor by grouping.}
+		\phxeqs{}{$= \lim_{s \to 3} \frac{(2s - 1)\cancel{(s - 3)}}{\cancel{(s - 3)}(s - 1)}$}{}
+		\phxeqs{}{$= \lim_{s \to 3} \frac{2s - 1}{s - 1}$}{}
+		\phxeqs{}{$= \frac{2(3) - 1}{3 - 1}$}{}
+		\phxeqf{}{$= \frac{5}{2}$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to 4} \frac{2x^2 - 13x + 20}{x^3 - 64}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{x \to 4} \frac{2x^2 - 5x - 8x + 20}{x^3 - 64}$}{Factor by grouping.}
+		\phxeqs{}{$= \lim_{x \to 4} \frac{(x - 4)(2x - 5)}{x^3 - 64}$}{}
+		\phxeqs{}{$= \lim_{x \to 4} \frac{\cancel{(x - 4)}(2x - 5)}{\cancel{(x - 4)}(x^2 + 4x + 16)}$}{Factor using difference of two cubes.}
+		\phxeqs{}{$= \lim_{x \to 4} \frac{2x - 5}{x^2 + 4x + 16}$}{}
+		\phxeqs{}{$= \frac{2(4) - 5}{4^2 + 4(4) + 16}$}{}
+		\phxeqs{}{$= \frac{3}{48}$}{}
+		\phxeqf{}{$= \frac{1}{16}$}{}
+	}
+
+\subsubsection{} \[\lim_{z \to 2} {\left(\frac{2z - z^2}{z^2 - 4}\right)}^3\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{z \to 2} {(\frac{-z\cancel{(z - 2)}}{\cancel{(z - 2)}(z + 2)})}^3$}{Factor.}
+		\phxeqs{}{$= \lim_{z \to 2} {(\frac{-z}{z + 2})}^3$}{}
+		\phxeqs{}{$= {(\frac{-2}{2 + 2})}^3$}{}
+		\phxeqs{}{$= {(-\frac{1}{2})}^3$}{}
+		\phxeqs{}{$= -\frac{1}{8}$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to -1} \frac{\sqrt{x^2 + 3} - 2}{x^2 - 1}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{\sqrt{x^2 + 3} - 2}{x^2 - 1} \cdot \frac{\sqrt{x^2 + 3} + 2}{\sqrt{x^2 + 3} + 2}$}{Rationalize.}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{x^2 + 3 - 4}{(x^2 - 1)(\sqrt{x^2 + 3} + 2)}$}{}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{\cancel{x^2 - 1}}{\cancel{(x^2 - 1)}(\sqrt{x^2 + 3} + 2)}$}{}
+		\phxeqs{}{$= \lim_{x \to -1} \frac{1}{\sqrt{x^2 + 3} + 2}$}{}
+		\phxeqs{}{$= \frac{1}{\sqrt{{(-1)}^2 + 3} + 2}$}{}
+		\phxeqf{}{$= \frac{1}{4}$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to 2} \frac{\sqrt{2x} - \sqrt{6 - x}}{4 - x^2}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{x \to 2} \frac{\sqrt{2x} - \sqrt{6 - x}}{4 - x^2} \cdot \frac{\sqrt{2x} + \sqrt{6 - x}}{\sqrt{2x} + \sqrt{6 - x}}$}{Rationalize.}
+		\phxeqs{}{$= \lim_{x \to 2} \frac{2x - (6 - x)}{(4 - x^2)(\sqrt{2x} + \sqrt{6 - x})}$}{}
+		\phxeqs{}{$= \lim_{x \to 2} \frac{3x - 6}{(4 - x^2)(\sqrt{2x} + \sqrt{6 - x})}$}{}
+		\phxeqs{}{$= \lim_{x \to 2} \frac{-3\cancel{(2 - x)}}{\cancel{(2 - x)}(2 + x)(\sqrt{2x} + \sqrt{6 - x})}$}{Factor.}
+		\phxeqs{}{$= \lim_{x \to 2} -\frac{3}{(2 + x)(\sqrt{2x} + \sqrt{6 - x})}$}{}
+		\phxeqs{}{$= -\frac{3}{(2 + 2)(\sqrt{2(2)} + \sqrt{6 - 2})}$}{}
+		\phxeqs{}{$= -\frac{3}{16}$}{}
+	}
+
+\subsubsection{} \[\lim_{p \to 1} \frac{p^3 - 1}{\sqrt{2p - 1} - 1}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{p \to 1} \frac{p^3 - 1}{\sqrt{2p - 1} - 1} \cdot \frac{\sqrt{2p - 1} + 1}{\sqrt{2p - 1} + 1}$}{Rationalize.}
+		\phxeqs{}{$= \lim_{p \to 1} \frac{(p^3 - 1)(\sqrt{2p - 1} + 1)}{2p - 1 - 1}$}{}
+		\phxeqs{}{$= \lim_{p \to 1} \frac{(p^3 - 1)(\sqrt{2p - 1} + 1)}{2p - 2}$}{}
+		\phxeqs{}{$= \lim_{p \to 1} \frac{\cancel{(p - 1)}(p^2 + p + 1)(\sqrt{2p - 1} + 1)}{2\cancel{(p - 1)}}$}{Factor.}
+		\phxeqs{}{$= \lim_{p \to 1} \frac{(p^2 + p + 1)(\sqrt{2p - 1} + 1)}{2}$}{}
+		\phxeqs{}{$= \frac{(1^2 + 1 + 1)(\sqrt{2(1) - 1} + 1)}{2}$}{}
+		\phxeqs{}{$= \frac{6}{2}$}{}
+		\phxeqf{}{$= 3$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to -3} \frac{6x + 2x^2}{-1 - \sqrt[3]{2x + 5}}\]
+	\phxproof{
+		\phxeqb{}{Indeterminate, type $\frac{0}{0}$.}{}
+		\phxeqs{}{$= \lim_{x \to -3} \frac{6x + 2x^2}{-(1 + \sqrt[3]{2x + 5})}$}{}
+		\phxeqs{}{$= \lim_{x \to -3} \frac{6x + 2x^2}{-(1 + \sqrt[3]{2x + 5})} \cdot \frac{1 - \sqrt[3]{2x + 5} + {(\sqrt[3]{2x + 5})}^2}{1 - \sqrt[3]{2x + 5} + {(\sqrt[3]{2x + 5})}^2}$}{Rationalize using sum of two cubes.}
+		\phxeqs{}{$= \lim_{x \to -3} \frac{(6x + 2x^2)(1 - \sqrt[3]{2x + 5} + {(\sqrt[3]{2x + 5})}^2)}{-(1 + 2x + 5)}$}{}
+		\phxeqs{}{$= \lim_{x \to -3} \frac{(6x + 2x^2)(1 - \sqrt[3]{2x + 5} + {(\sqrt[3]{2x + 5})}^2)}{-2x - 6}$}{}
+		\phxeqs{}{$= \lim_{x \to -3} \frac{-x\cancel{(-2x - 6)}(1 - \sqrt[3]{2x + 5} + {(\sqrt[3]{2x + 5})}^2)}{\cancel{-2x - 6}}$}{Factor.}
+		\phxeqs{}{$= \lim_{x \to -3} -x(1 - \sqrt[3]{2x + 5} + {(\sqrt[3]{2x + 5})}^2)$}{}
+		\phxeqs{}{$= -(-3)(1 - \sqrt[3]{2(-3) + 5} + {(\sqrt[3]{2(-3) + 5})}^2)$}{}
+		\phxeqs{}{$= 3(1 - \sqrt[3]{-1} + {(\sqrt[3]{-1})}^2)$}{}
+		\phxeqs{}{$= 3(1 + 1 + 1)$}{}
+		\phxeqf{}{$= 9$}{}
+	}
