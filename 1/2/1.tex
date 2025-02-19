@@ -1,0 +1,76 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <atraphaxia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\section{One-Sided Limits}
+
+\subsection{} Evaluate the following limits.
+
+\subsubsection{} \[\lim_{x \to 3^-} \sqrt{7x^2 - 12x + 5}\]
+	\phxproof{
+		\phxeqb{}{$= \lim_{x \to 3^-} \sqrt{7x^2 - 7x - 5x + 5}$}{Factor.}
+		\phxeqs{}{$= \lim_{x \to 3^-} \sqrt{(7x - 5)(x - 1)}$}{}
+		\phxeqs{}{$= \sqrt{(7(3) - 5)(3 - 1)}$}{Since $\sqrt{(7x - 5)(x - 1)} \not\to 0$ as $x \to 3^-$, eliminate the limit.}
+		\phxeqs{}{$= \sqrt{(16)(2)}$}{}
+		\phxeqf{}{$= 4\sqrt{2}$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to \frac{3}{2}} \sqrt{4x^2 - 12x + 9}\]
+	\phxproof{
+		\phxeqb{}{$= \lim_{x \to \frac{3}{2}} \sqrt{4x^2 - 6x - 6x + 9}$}{Factor.}
+		\phxeqs{}{$= \lim_{x \to \frac{3}{2}} \sqrt{{(2x - 3)}^2}$}{}
+		\phxeqs{}{$= 2(\frac{3}{2}) - 3$}{}
+		\phxeqf{}{$= 0$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to {\frac{2}{3}}^+} \floor{3x + 1}\]
+	\phxproof{
+		\phxeqb{}{$= \lim_{x \to {\frac{2}{3}}^+} \floor{3^+}$}{}
+		\phxeqf{}{$= 3$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to {\frac{2}{3}}^-} \floor{3x + 1}\]
+	\phxproof{
+		\phxeqb{}{$= \lim_{x \to {\frac{2}{3}}^-} \floor{3^-}$}{}
+		\phxeqf{}{$= 2$}{}
+	}
+
+\subsubsection{} \[\lim_{x \to \frac{2}{3}} \floor{3x + 1}\]
+	\phxproof{
+		\phxeqf{}{DNE}{If one-sided limits aren't equal, the limit doesn't exist.}
+	}
+
+\subsubsection{} \[\lim_{x \to 1} \frac{\abs{4x} - \abs{x - 5}}{1 - x}\]
+	\phxproof{
+		\phxeqb{}{$= \lim_{x \to 1} \frac{4x - \abs{x - 5}}{1 - x}$}{$\abs{4x} = 4x, x \ge 0$}
+		\phxeqs{}{$= \lim_{x \to 1} \frac{4x - (-x + 5)}{1 - x}$}{$\abs{x - 5} = -x + 5, x < 5$}
+		\phxeqs{}{$= \lim_{x \to 1} \frac{5x - 5}{1 - x}$}{}
+		\phxeqs{}{$= \lim_{x \to 1} \frac{-5\cancel{(1 - x)}}{\cancel{1 - x}}$}{}
+		\phxeqf{}{$= -5$}{}
+	}
+
+\subsubsection{} \[\lim_{t \to -\frac{1}{2}} \frac{2t + 1}{\abs{2t^2 - 3t - 2}}\]
+	\phxproof{
+		\phxeqb{}{$\lim_{t \to {-\frac{1}{2}}^-} \frac{2t + 1}{\abs{2t^2 - 3t - 2}}$}{Evaluate negative one-sided limit.}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} \frac{2t + 1}{2t^2 - 3t - 2}$}{$\abs{2t^2 - 3t - 2} = 2t^2 - 3t - 2, x < -\frac{1}{2}$}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} \frac{2t + 1}{2t^2 - 4t + t - 2}$}{Factor.}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} \frac{\cancel{2t + 1}}{\cancel{(2t + 1)}(t - 2)}$}{}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} \frac{1}{t - 2}$}{}
+		\phxeqs{}{$= \frac{1}{-\frac{1}{2} - 2}$}{}
+		\phxeqs{}{$= -\frac{2}{5}$}{}
+		\phxeqb{}{$\lim_{t \to {-\frac{1}{2}}^+} \frac{2t + 1}{\abs{2t^2 - 3t - 2}}$}{Evaluate positive one-sided limit.}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} \frac{2t + 1}{-(2t^2 - 3t - 2)}$}{$\abs{2t^2 - 3t - 2} = -(2t^2 - 3t - 2), x \ge -\frac{1}{2}$}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} -\frac{2t + 1}{2t^2 - 3t - 2}$}{}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} -\frac{2t + 1}{2t^2 - 4t + t - 2}$}{Factor.}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} -\frac{\cancel{2t + 1}}{\cancel{(2t + 1)}(t - 2)}$}{}
+		\phxeqs{}{$= \lim_{t \to {-\frac{1}{2}}^-} -\frac{1}{t - 2}$}{}
+		\phxeqs{}{$= -\frac{1}{-\frac{1}{2} - 2}$}{}
+		\phxeqs{}{$= \frac{2}{5}$}{}
+		\phxeqf{}{DNE}{If one-sided limits aren't equal, the limit doesn't exist.}
+	}
+
+\subsubsection{} \[\lim{x \to 1^-} \frac{x\floor{x} - 1}{\floor{x} - 1}\]
+	\phxproof{
+		\phxeqb{}{$= \lim_{x \to 1^-} \frac{1\floor{1^-} - 1}{\floor{1^-} - 1}$}{}
+		\phxeqs{}{$= \lim_{x \to 1^-} \frac{1(0) - 1}{(0) - 1}$}{}
+		\phxeqf{}{$= 1$}{}
+	}
